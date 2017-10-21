@@ -1,6 +1,5 @@
 package com.example.tyler.cookbook;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -52,21 +51,21 @@ public class Recipe {
         return servingSize;
     }
 
-    public boolean containsIngredient() {
-
-        String chosenIngredient;
+    public boolean containsIngredient(String chosenIngredient) {
 
         int arrayLength=ingredients.size();
 
         for(int i=0;i<arrayLength;i++) {
 
-            if (ingredients(i)==chosenIngredient) {
+            if (ingredients.get(i)==chosenIngredient) {
 
                 return true;
             }
 
             }
+            return false;
         }
+
 
     }
 
