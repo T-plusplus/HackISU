@@ -33,14 +33,17 @@ public class Recipe {
     }
 
     public String getCookingTime() {
+
         return cookingTime;
     }
 
     public ArrayList<String> getIngredients() {
+
         return ingredients;
     }
 
     public int getServingSize() {
+
         return servingSize;
     }
 
