@@ -5,11 +5,10 @@ package com.example.tyler.cookbook;
  */
 
 public class apiURL {
-    public static final String url = "https://api.edamam.com";
-    public static final String searchpath="https://api.edamam.com/search";
+    public static final String url = "http://food2fork.com/api/get";
+    public static final String searchpath="http://food2fork.com/api/search ";
 
-    public static final String appID="32644bcd";
-    public static final String appKey="f70207a7b8a0188cfa5f49caaaa19fee";
-
+    //public static final String appID="32644bcd";
+    public static final String appKey="f7b5a29105af5e1080b9f2694a8a01ff";
 
 }
