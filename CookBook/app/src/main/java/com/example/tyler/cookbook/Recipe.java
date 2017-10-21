@@ -18,10 +18,15 @@ public class Recipe {
 
 
 
-    public Recipe(String cTime, String rName, ArrayList<String> ing, int sSize) {
+    public Recipe(String cTime, String rName, String ingrStr, int sSize) {
         cookingTime=cTime;
         recipeName=rName;
-        ingredients=ing;
+        String[] ingrArr=ingrStr.split("%");
+        for(int dex=0; dex<ingrArr.length; dex++)
+        {
+            //add each item  to an array list
+            ingredients.add(ingrArr[dex]);
+        }
         servingSize=sSize;
 
 
@@ -49,11 +54,9 @@ public class Recipe {
 
     public boolean containsIngredient() {
 
-        new scanner = Scanner(System.in);
-
         String chosenIngredient;
 
-        int arrayLength=ingredients.length();
+        int arrayLength=ingredients.size();
 
         for(int i=0;i<arrayLength;i++) {
 
