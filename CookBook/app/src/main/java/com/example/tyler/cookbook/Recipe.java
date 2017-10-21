@@ -33,6 +33,10 @@ public class Recipe {
 
     }
 
+    /**
+     * returns the Recipe name
+     * @return recipeName
+     */
     public String getRecipeName() {
 
         return recipeName;
@@ -42,7 +46,7 @@ public class Recipe {
 
         return cookingTime;
     }
-
+    
     public ArrayList<String> getIngredients() {
 
         return ingredients;
@@ -53,16 +57,17 @@ public class Recipe {
         return servingSize;
     }
 
+    /**
+     * Tells if this recipe contains or uses a specified ingredient
+     * @param chosenIngredient
+     * @return true if the ingredient is used, false if the recipe does not
+     */
     public boolean containsIngredient(String chosenIngredient) {
 
-        int arrayLength=ingredients.size();
-
-        for(int i=0;i<arrayLength;i++) {
+        for(int i=0;i<ingredients.size();i++) {
 
             if (ingredients.get(i).toLowerCase().contains(chosenIngredient.toLowerCase())) {
-
                 return true;
-
             }
         }
         return false;
