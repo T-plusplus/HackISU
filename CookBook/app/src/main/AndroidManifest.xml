@@ -28,7 +28,9 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name=".CreateRecipe"></activity>
+        <activity android:name=".CreateRecipe" />
+        <activity android:name=".Filter_Activity" />
+        <activity android:name=".Results_Activity"></activity>
     </application>
 
 </manifest>
