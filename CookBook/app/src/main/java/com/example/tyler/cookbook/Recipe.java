@@ -10,14 +10,16 @@ public class Recipe {
 
 
 
-    private String cookingTime;
+    private int cookingTime;
     private String recipeName;
     private ArrayList<String> ingredients;
     private int servingSize;
+    private String instructions;
 
 
 
-    public Recipe(String cTime, String rName, String ingrStr, int sSize) {
+    public Recipe(String instruct, int cTime, String rName, String ingrStr, int sSize) {
+        instructions=instruct;
         cookingTime=cTime;
         recipeName=rName;
         String[] ingrArr=ingrStr.split("%");
@@ -36,7 +38,7 @@ public class Recipe {
         return recipeName;
     }
 
-    public String getCookingTime() {
+    public int getCookingTime() {
 
         return cookingTime;
     }
@@ -57,15 +59,34 @@ public class Recipe {
 
         for(int i=0;i<arrayLength;i++) {
 
-            if (ingredients.get(i)==chosenIngredient) {
+            if (ingredients.get(i).toLowerCase().contains(chosenIngredient.toLowerCase())) {
 
                 return true;
-            }
 
             }
-            return false;
         }
-
-
+        return false;
     }
 
+    public boolean overallTime(int wantedTime) {
+
+        if(cookingTime<=wantedTime) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public boolean servingSize(int minPeople,int maxPeople) {
+
+        if(servingSize>=minPeople && servingSize<=maxPeople) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+
+}
