@@ -46,7 +46,7 @@ public class Recipe {
 
         return cookingTime;
     }
-    
+
     public ArrayList<String> getIngredients() {
 
         return ingredients;
