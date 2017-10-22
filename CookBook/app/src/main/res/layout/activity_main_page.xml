@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tyler.cookbook.MainPage"
+    android:background="@drawable/coffeee">
+
+
+
+    <Button
+        android:id="@+id/button4"
+        style="@android:style/Widget.Material.Button.Colored"
+        android:layout_width="174dp"
+        android:layout_height="108dp"
+        android:layout_alignLeft="@+id/linearLayout2"
+        android:layout_alignStart="@+id/linearLayout2"
+        android:layout_below="@+id/linearLayout2"
+        android:background="@color/colorAccent"
+        android:text="View grocery list" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:id="@+id/linearLayout2">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
+        <Button
+            android:id="@+id/button2"
+            style="@android:style/Widget.Material.Button.Colored"
+            android:layout_width="174dp"
+            android:layout_height="108dp"
+            android:background="@color/colorAccent"
+            android:text="Add a recipe" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button3"
+        style="@android:style/Widget.Material.Button.Colored"
+        android:layout_width="174dp"
+        android:layout_height="109dp"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_alignLeft="@+id/linearLayout2"
+        android:layout_alignStart="@+id/linearLayout2"
+        android:background="@color/colorAccent"
+        android:elevation="0dp"
+        android:text="Search for a recipe" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="exit" />
+</RelativeLayout>
