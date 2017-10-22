@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import com.google.gson.Gson;
 
 public class MainPage extends AppCompatActivity {
 
@@ -11,7 +12,10 @@ public class MainPage extends AppCompatActivity {
     Button Search;
     Button Exit;
     Button Add;
-    String[] JsonRecipes = new String[]{"DEBUG"};
+    Recipe defaultRecipe = new Recipe("eat bread.",1, "Eating Bread butts", "bread", 1);
+    Gson gson = new Gson();
+
+    String[] JsonRecipes = new String[]{gson.toJson(defaultRecipe)};
 
 
     @Override

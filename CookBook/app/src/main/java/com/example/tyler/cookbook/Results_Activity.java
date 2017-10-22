@@ -26,14 +26,14 @@ public class Results_Activity extends AppCompatActivity {
         String ingredients = bundle.getString("ingredients");
         int time = bundle.getInt("time");
         int servings = bundle.getInt("servings");
+
         //////////////////////////////////////////////////////
         System.out.println("DEBUG - retrieving recipe elements");
         ////////////////////////////////////////////////////////
-        
+
         String[] RecipeBookJson = bundle.getStringArray("RecipeBookJson");
 
         Scanner scanner = new Scanner(ingredients);  // we turn our ingredients into an array of indredients
-        scanner.useDelimiter(",");
         ArrayList<String> ListOfSearchingIngredients = new ArrayList<String>();
         while(scanner.hasNext()){
             ListOfSearchingIngredients.add(scanner.next());
