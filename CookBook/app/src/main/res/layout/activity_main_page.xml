@@ -9,7 +9,7 @@
 
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/buttonGrocery"
         style="@android:style/Widget.Material.Button.Colored"
         android:layout_width="174dp"
         android:layout_height="108dp"
@@ -31,7 +31,7 @@
             android:layout_height="10dp" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/buttonAdd"
             style="@android:style/Widget.Material.Button.Colored"
             android:layout_width="174dp"
             android:layout_height="108dp"
@@ -45,7 +45,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonSearch"
         style="@android:style/Widget.Material.Button.Colored"
         android:layout_width="174dp"
         android:layout_height="109dp"
@@ -57,7 +57,7 @@
         android:text="Search for a recipe" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/buttonExit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

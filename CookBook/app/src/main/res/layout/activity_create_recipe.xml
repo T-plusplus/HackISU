@@ -4,13 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.tyler.cookbook.CreateRecipe">
+    tools:context="com.example.tyler.cookbook.CreateRecipe"
+    android:orientation="vertical">
 
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/recipeName"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="TextView" />
+        android:text="@string/rn"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/ingr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/ing"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/servesize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/ss"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/cooktime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/ct"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/cookdir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/dir"
+        android:inputType="text"/>
+
+    <Button
+        android:id="@+id/finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Done" />
+
 </LinearLayout>
