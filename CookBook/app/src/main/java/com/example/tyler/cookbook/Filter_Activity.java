@@ -26,10 +26,21 @@ public class Filter_Activity extends AppCompatActivity {
 
        Intent intent = getIntent();
        Bundle bundle = intent.getExtras();
-
-
-        final ArrayList<String> RecipeBookJson = new ArrayList<String>(Arrays.asList( bundle.getStringArray("JsonRecipes") ) );
-
+        ////////////////////////////////////
+        System.out.println("DEBUG - bundle");
+        /////////////////////////////////////////
+        String[] recipeBookPartial = bundle.getStringArray("JsonRecipes");
+        ArrayList<String> TempRecipeBookJson;
+        if(recipeBookPartial.length >0) {
+          TempRecipeBookJson = new ArrayList<String>(Arrays.asList(recipeBookPartial));
+        }else{
+            //THROW ERROR
+            TempRecipeBookJson = new ArrayList<String>();
+        }
+        final ArrayList<String> RecipeBookJson =TempRecipeBookJson;
+        //////////////////////////////////////
+        System.out.println("DEBUG - aRRAY");
+        ///////////////////////////////////////
         b1=(Button)findViewById(R.id.button);
         b1.setOnClickListener(new View.OnClickListener() {
 

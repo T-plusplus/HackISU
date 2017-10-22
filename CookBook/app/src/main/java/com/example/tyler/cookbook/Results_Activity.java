@@ -60,6 +60,7 @@ public class Results_Activity extends AppCompatActivity {
         ScrollView scroll = (ScrollView) this.findViewById(R.id.scrollView);
         if(ResultRecipes.size() == 0){
             TextView noResults = new TextView(this);
+            noResults.setText("No Results!");
             scroll.addView(noResults); // fix
         }
     }

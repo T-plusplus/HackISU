@@ -53,7 +53,7 @@ public class Recipe{
      * @return true if the ingredient is used, false if the recipe does not
      */
     public boolean containsIngredient(String chosenIngredient) {
-
+        if(chosenIngredient.isEmpty() || chosenIngredient == null) return false;
         for(int i=0;i<ingredients.size();i++) {
 
             if (ingredients.get(i).toLowerCase().contains(chosenIngredient.toLowerCase())) {
@@ -64,7 +64,6 @@ public class Recipe{
     }
 
     public boolean overallTime(int wantedTime) {
-
         if(cookingTime<=wantedTime) {
             return true;
         }
