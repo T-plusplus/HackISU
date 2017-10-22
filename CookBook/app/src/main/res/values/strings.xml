@@ -104,4 +104,9 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="rn">Recipe Name</string>
+    <string name="ing">Ingredients</string>
+    <string name="ct">Cooking Time</string>
+    <string name="ss">Serving Size</string>
+    <string name="dir">Directions</string>
 </resources>

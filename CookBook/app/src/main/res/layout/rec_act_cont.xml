@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/recName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/rn" />
+
+    <TextView
+        android:id="@+id/ingre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ing" />
+
+    <TextView
+        android:id="@+id/cookt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ct" />
+
+    <TextView
+        android:id="@+id/serve"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ss" />
+
+    <TextView
+        android:id="@+id/cdir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dir" />
+</LinearLayout>
