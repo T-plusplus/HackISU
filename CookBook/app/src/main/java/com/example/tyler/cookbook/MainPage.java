@@ -11,19 +11,20 @@ public class MainPage extends AppCompatActivity {
     Button Search;
     Button Exit;
     Button Add;
+    String[] JsonRecipes = new String[]{"DEBUG"};
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
+        System.out.println("DEBUG - Launch ");
 
         Exit = (Button) findViewById(R.id.buttonExit);
         Exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
-
             }
         });
 
@@ -34,6 +35,7 @@ public class MainPage extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent i = new Intent(MainPage.this,Filter_Activity.class);
+                i.putExtra("JsonRecipes", JsonRecipes);
                 startActivity(i);
                 //finish();
 
