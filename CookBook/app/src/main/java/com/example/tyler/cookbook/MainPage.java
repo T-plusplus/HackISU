@@ -40,16 +40,27 @@ public class MainPage extends AppCompatActivity {
             }
         });
 
-        //Grocery = (Button) findViewById(R.id.buttonSearch);
-        //Grocery.setOnClickListener(new View.OnClickListener() {
-            //@overide
-            //public void onClick(View v) {
+        Grocery = (Button) findViewById(R.id.buttonGrocery);
+        Grocery.setOnClickListener(new View.OnClickListener() {
 
-                //Intent i = new Intent(MainPage.this,TO DO.class);
-                //startActivity(i);
-                //finish();
+            public void onClick(View v) {
 
-            //}
-        //});
+                Intent i = new Intent(MainPage.this,Grocery.class);
+                startActivity(i);
+                finish();
+
+            }
+        });
+
+        Add = (Button) findViewById(R.id.buttonAdd);
+        Add.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View V) {
+
+                Intent i = new Intent(MainPage.this,CreateRecipe.class);
+                startActivity(i);
+                finish();
+            }
+        });
     }
 }
