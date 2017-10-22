@@ -21,7 +21,7 @@ public class Results_Activity extends AppCompatActivity {
         ////////////////////////////////////////////
         System.out.println("DEBUG - bundle Results");
         ////////////////////////////////////////////
-        
+
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
 
@@ -34,21 +34,23 @@ public class Results_Activity extends AppCompatActivity {
         System.out.println("DEBUG - retrieving recipe elements");
         ////////////////////////////////////////////////////////
 
-        String[] RecipeBookJson = bundle.getStringArray("RecipeBookJson");
+        String[] RecipeBookJson = bundle.getStringArray("RecipeBookJson"); // the full recipe book in json
 
         Scanner scanner = new Scanner(ingredients);  // we turn our ingredients into an array of indredients
-        ArrayList<String> ListOfSearchingIngredients = new ArrayList<String>();
+        ArrayList<String> ListOfSearchingIngredients = new ArrayList<String>();  // the list of ingredients we're looking for
         while(scanner.hasNext()){
             ListOfSearchingIngredients.add(scanner.next());
         }
         scanner.close();
+
         Gson gson = new Gson();
         ArrayList<Recipe> RecipeBook = new ArrayList<Recipe>();
 
-        String[] temp = bundle.getStringArray("JsonRecipe");
-        for(int i = 0; i < temp.length; ++i){
-            Recipe temp2 = gson.fromJson(temp[i], Recipe.class);
-            RecipeBook.add(temp2); }
+        //String[] temp = bundle.getStringArray("JsonRecipe");
+        for(int i = 0; i < RecipeBookJson.length; ++i){
+            Recipe temp = gson.fromJson(RecipeBookJson[i], Recipe.class); // converts the json format into the full recipe
+            RecipeBook.add(temp);
+        }
 
         ArrayList<Recipe> ResultRecipes = new ArrayList<Recipe>();
 
