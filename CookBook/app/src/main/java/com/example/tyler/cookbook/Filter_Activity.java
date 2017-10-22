@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.view.View;
 import android.widget.EditText;
+import com.google.gson.Gson;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Filter_Activity extends AppCompatActivity {
 
@@ -14,11 +17,18 @@ public class Filter_Activity extends AppCompatActivity {
     EditText Ingredients;
     EditText Time;
     EditText Servings;
+    //EditText RecipeBook;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filter_);
+
+       Intent intent = getIntent();
+       Bundle bundle = intent.getExtras();
+
+
+        final ArrayList<String> RecipeBookJson = new ArrayList<String>(Arrays.asList( bundle.getStringArray("JsonRecipes") ) );
 
         b1=(Button)findViewById(R.id.button);
         b1.setOnClickListener(new View.OnClickListener() {
@@ -36,17 +46,19 @@ public class Filter_Activity extends AppCompatActivity {
                 intent.putExtra("ingredients", ingredients);
                 intent.putExtra("time", time);
                 intent.putExtra("servings",servings);
-
+                intent.putExtra("RecipeBookJson",RecipeBookJson);
 
                 startActivity(intent);
             }
 
         });
 
+
         Title = (EditText) findViewById(R.id.editText2);
         Ingredients = (EditText) findViewById(R.id.editText);
         Time = (EditText) findViewById(R.id.editText3);
         Servings = (EditText) findViewById(R.id.editText4);
+
     }
 
 
