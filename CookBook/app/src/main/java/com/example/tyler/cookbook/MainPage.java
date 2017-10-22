@@ -35,7 +35,7 @@ public class MainPage extends AppCompatActivity {
 
                 Intent i = new Intent(MainPage.this,Filter_Activity.class);
                 startActivity(i);
-                finish();
+                //finish();
 
             }
         });

@@ -10,14 +10,14 @@
 
     <Button
         android:id="@+id/buttonGrocery"
-        style="@android:style/Widget.Material.Button.Colored"
         android:layout_width="174dp"
         android:layout_height="108dp"
         android:layout_alignLeft="@+id/linearLayout2"
         android:layout_alignStart="@+id/linearLayout2"
         android:layout_below="@+id/linearLayout2"
         android:background="@color/colorAccent"
-        android:text="View grocery list" />
+        android:text="View grocery list"
+        android:textColor="@android:color/white"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -32,11 +32,11 @@
 
         <Button
             android:id="@+id/buttonAdd"
-            style="@android:style/Widget.Material.Button.Colored"
             android:layout_width="174dp"
             android:layout_height="108dp"
             android:background="@color/colorAccent"
-            android:text="Add a recipe" />
+            android:text="Add a recipe"
+            android:textColor="@android:color/white"/>
 
         <Space
             android:layout_width="wrap_content"
@@ -46,7 +46,6 @@
 
     <Button
         android:id="@+id/buttonSearch"
-        style="@android:style/Widget.Material.Button.Colored"
         android:layout_width="174dp"
         android:layout_height="109dp"
         android:layout_above="@+id/linearLayout2"
@@ -54,7 +53,8 @@
         android:layout_alignStart="@+id/linearLayout2"
         android:background="@color/colorAccent"
         android:elevation="0dp"
-        android:text="Search for a recipe" />
+        android:text="Search for a recipe"
+        android:textColor="@android:color/white"/>
 
     <Button
         android:id="@+id/buttonExit"
@@ -63,5 +63,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:text="exit" />
+        android:text="exit"
+        android:textColor="@android:color/white"/>
 </RelativeLayout>
