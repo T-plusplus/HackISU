@@ -10,6 +10,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
+import android.widget.LinearLayout;
 
 public class Results_Activity extends AppCompatActivity {
 
@@ -66,11 +67,23 @@ public class Results_Activity extends AppCompatActivity {
         }
 
         //Now display the resulting recipes, or something else if there is none.
-        ScrollView scroll = (ScrollView) this.findViewById(R.id.scrollView);
+        ScrollView scroll = (ScrollView) this.findViewById(R.id.scrollView); //new ScrollView(this);
         if(ResultRecipes.size() == 0){
             TextView noResults = new TextView(this);
             noResults.setText("No Results!");
             scroll.addView(noResults); // fix
         }
+        /*else{
+            LinearLayout ll = new LinearLayout(this);
+            ll.setOrientation(LinearLayout.VERTICAL);
+            scroll.addView(ll);
+            TextView ResultRecipe = new TextView(this);
+            ResultRecipe.setText(ResultRecipes.get(0).getRecipeName());
+            ll.addView(ResultRecipe);
+
+        }*/
+
+
+        setContentView(R.layout.activity_results_);
     }
 }

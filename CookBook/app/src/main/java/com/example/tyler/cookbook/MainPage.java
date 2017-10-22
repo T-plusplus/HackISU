@@ -13,7 +13,7 @@ public class MainPage extends AppCompatActivity {
     Button Exit;
     Button Add;
 
-    Recipe defaultRecipe = new Recipe("eat bread.",1, "Eating Bread butts", "bread, air", 1);
+    Recipe defaultRecipe = new Recipe("eat bread.",1, "Eating Bread", "bread, air", 1);
     Gson gson = new Gson();
 
     String[] JsonRecipes = new String[]{gson.toJson(defaultRecipe)};
