@@ -6,5 +6,4 @@ package com.example.tyler.cookbook;
 
 public class textfileKeeper {
     public static final String MyRecipes="myRecipes.txt";
-    
 }
