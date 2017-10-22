@@ -12,7 +12,7 @@ import java.util.Arrays;
 
 public class Filter_Activity extends AppCompatActivity {
 
-    Button b1;
+    Button b1,b2;
     EditText Title;
     EditText Ingredients;
     EditText Time;
@@ -82,6 +82,19 @@ public class Filter_Activity extends AppCompatActivity {
         Time = (EditText) findViewById(R.id.editText3);
         Servings = (EditText) findViewById(R.id.editText4);
 
+
+        b2 = (Button) findViewById(R.id.button2);
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(Filter_Activity.this,MainPage.class);
+
+                startActivity(i);
+                finish();
+
+            }
+        });
     }
 
 
