@@ -12,7 +12,8 @@ public class MainPage extends AppCompatActivity {
     Button Search;
     Button Exit;
     Button Add;
-    Recipe defaultRecipe = new Recipe("eat bread.",1, "Eating Bread butts", "bread", 1);
+
+    Recipe defaultRecipe = new Recipe("eat bread.",1, "Eating Bread butts", "bread, air", 1);
     Gson gson = new Gson();
 
     String[] JsonRecipes = new String[]{gson.toJson(defaultRecipe)};
@@ -22,7 +23,9 @@ public class MainPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
+        ///////////////////////////////////////////
         System.out.println("DEBUG - Launch ");
+        //////////////////////////////////////////
 
         Exit = (Button) findViewById(R.id.buttonExit);
         Exit.setOnClickListener(new View.OnClickListener() {

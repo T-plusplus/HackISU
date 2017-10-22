@@ -4,6 +4,7 @@ import android.os.Parcelable;
 
 import java.util.ArrayList;
 import android.os.Parcel;
+import java.util.Scanner;
 
 /**
  * Created by joshuabump on 10/20/17.
@@ -25,12 +26,15 @@ public class Recipe{
         instructions=instruct;
         cookingTime=cTime;
         recipeName=rName;
-        String[] ingrArr=ingrStr.split("%");
-        for(int dex=0; dex<ingrArr.length; dex++)
+        Scanner scanner = new Scanner(ingrStr);
+        scanner.useDelimiter(",");
+        ingredients = new ArrayList<String>();
+       while(scanner.hasNext())
         {
             //add each item  to an array list
-            ingredients.add(ingrArr[dex]);
+            ingredients.add(scanner.next());
         }
+        scanner.close();
         servingSize=sSize;
     }
     public Recipe(){}

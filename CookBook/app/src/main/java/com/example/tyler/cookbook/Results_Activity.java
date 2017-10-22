@@ -17,8 +17,11 @@ public class Results_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results_);
-        System.out.println("DEBUG - bundle Results");
 
+        ////////////////////////////////////////////
+        System.out.println("DEBUG - bundle Results");
+        ////////////////////////////////////////////
+        
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
 
@@ -38,7 +41,7 @@ public class Results_Activity extends AppCompatActivity {
         while(scanner.hasNext()){
             ListOfSearchingIngredients.add(scanner.next());
         }
-
+        scanner.close();
         Gson gson = new Gson();
         ArrayList<Recipe> RecipeBook = new ArrayList<Recipe>();
 
