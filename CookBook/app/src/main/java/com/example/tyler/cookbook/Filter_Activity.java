@@ -40,7 +40,7 @@ public class Filter_Activity extends AppCompatActivity {
         final ArrayList<String> RecipeBookJson =TempRecipeBookJson;
         //////////////////////////////////////
         System.out.println("DEBUG - aRRAY");
-        ///////////////////////////////////////
+        //////////////////////////////////////
         b1=(Button)findViewById(R.id.button);
         b1.setOnClickListener(new View.OnClickListener() {
 
@@ -48,9 +48,15 @@ public class Filter_Activity extends AppCompatActivity {
             public void onClick(View view) {
                 String title = Title.getText().toString();
                 String ingredients = Ingredients.getText().toString();
-                int time = Integer.parseInt(Time.getText().toString());
-                int servings = Integer.parseInt(Servings.getText().toString());
 
+                int time = -1;
+                if(!Servings.getText().toString().isEmpty()) {
+                    time = Integer.parseInt(Time.getText().toString());
+                }
+                int servings = 0;
+                if(!Servings.getText().toString().isEmpty()) {
+                    servings = Integer.parseInt(Servings.getText().toString());
+                }
 
                 Intent intent = new Intent(Filter_Activity.this, Results_Activity.class);
                 intent.putExtra("title", title);

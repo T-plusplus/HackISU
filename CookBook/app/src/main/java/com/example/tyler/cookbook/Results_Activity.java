@@ -17,6 +17,7 @@ public class Results_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results_);
+        System.out.println("DEBUG - bundle Results");
 
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
@@ -25,7 +26,10 @@ public class Results_Activity extends AppCompatActivity {
         String ingredients = bundle.getString("ingredients");
         int time = bundle.getInt("time");
         int servings = bundle.getInt("servings");
-
+        //////////////////////////////////////////////////////
+        System.out.println("DEBUG - retrieving recipe elements");
+        ////////////////////////////////////////////////////////
+        
         String[] RecipeBookJson = bundle.getStringArray("RecipeBookJson");
 
         Scanner scanner = new Scanner(ingredients);  // we turn our ingredients into an array of indredients

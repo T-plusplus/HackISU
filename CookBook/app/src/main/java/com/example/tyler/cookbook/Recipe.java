@@ -64,7 +64,7 @@ public class Recipe{
     }
 
     public boolean overallTime(int wantedTime) {
-        if(cookingTime<=wantedTime) {
+        if(cookingTime<=wantedTime  || wantedTime == -1) {
             return true;
         }
         else {
@@ -74,7 +74,7 @@ public class Recipe{
 
     public boolean servingSize(int minPeople,int maxPeople) {
         if(minPeople>maxPeople) return false;
-        if(servingSize>=minPeople && servingSize<=maxPeople) {
+        if((servingSize>=minPeople && servingSize<=maxPeople) || (minPeople==0 && maxPeople ==0) ){
             return true;
         }
         else {
