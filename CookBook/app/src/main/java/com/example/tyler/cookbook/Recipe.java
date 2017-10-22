@@ -1,12 +1,15 @@
 package com.example.tyler.cookbook;
 
+import android.os.Parcelable;
+
 import java.util.ArrayList;
+import android.os.Parcel;
 
 /**
  * Created by joshuabump on 10/20/17.
  */
 
-public class Recipe {
+public class Recipe{
 
 
 
@@ -29,33 +32,20 @@ public class Recipe {
             ingredients.add(ingrArr[dex]);
         }
         servingSize=sSize;
-
-
     }
+    public Recipe(){}
 
     /**
      * returns the Recipe name
      * @return recipeName
      */
-    public String getRecipeName() {
+    public String getRecipeName() {return recipeName;}
 
-        return recipeName;
-    }
+    public int getCookingTime() {return cookingTime;}
 
-    public int getCookingTime() {
+    public ArrayList<String> getIngredients() {return ingredients;}
 
-        return cookingTime;
-    }
-
-    public ArrayList<String> getIngredients() {
-
-        return ingredients;
-    }
-
-    public int getServingSize() {
-
-        return servingSize;
-    }
+    public int getServingSize() {return servingSize;}
 
     /**
      * Tells if this recipe contains or uses a specified ingredient
@@ -84,7 +74,7 @@ public class Recipe {
     }
 
     public boolean servingSize(int minPeople,int maxPeople) {
-
+        if(minPeople>maxPeople) return false;
         if(servingSize>=minPeople && servingSize<=maxPeople) {
             return true;
         }
@@ -92,6 +82,5 @@ public class Recipe {
             return false;
         }
     }
-
 
 }
